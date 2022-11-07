@@ -2,14 +2,13 @@ package com.fourward.linkchart.controller;
 
 import com.fourward.linkchart.dto.UserInfoDTO;
 import com.fourward.linkchart.service.IUserInfoService;
+import com.fourward.linkchart.service.impl.UserInfoService;
 import com.fourward.linkchart.util.CmmUtil;
 import com.fourward.linkchart.util.EncryptUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -67,6 +66,7 @@ public class UserInfoController {
             String email = CmmUtil.nvl(request.getParameter("email")); //이메일
             String addr1 = CmmUtil.nvl(request.getParameter("addr1")); //주소
             String addr2 = CmmUtil.nvl(request.getParameter("addr2")); //상세주소
+            String phone_number = CmmUtil.nvl(request.getParameter("phone_number"));//휴대전화
             /*
              * #######################################################
              *        웹(회원정보 입력화면)에서 받는 정보를 String 변수에 저장 끝!!
@@ -111,6 +111,7 @@ public class UserInfoController {
             pDTO.setEmail(EncryptUtil.encAES128CBC(email));
             pDTO.setAddr1(addr1);
             pDTO.setAddr2(addr2);
+            pDTO.setPhone_number(phone_number);
 
             /*
              * #######################################################
@@ -294,4 +295,8 @@ public class UserInfoController {
 
         return "/user/LoginResult";
     }
+        /**
+     * 아이디 중복 확인
+     */
+
 }

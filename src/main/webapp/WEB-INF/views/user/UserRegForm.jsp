@@ -80,7 +80,9 @@
 <h1>회원가입 화면</h1>
 <br/>
 <form name="f" method="post" action="/user/insertUserInfo" onsubmit="return doRegUserCheck(this);">
-    <label>* 아이디 : <input type="text" name="user_id" style="width:400px"/></label><br/>
+    <label>* 아이디 : <input type="text" name="user_id" style="width:400px"/></label>
+    <button type="button">중복확인</button>
+    <br/>
     <label>* 이름 : <input type="text" name="user_name" style="width:400px"/></label><br/>
     <hr/>
     <label>* 비밀번호 : <input type="password" name="password" style="width:400px"/></label><br/>
@@ -91,6 +93,7 @@
     <input type="button" value="우편번호" onclick="kakaoPost(this.form)"/>
     <br/>
     <label>* 상세 주소 : <input type="text" name="addr2" style="width:400px"/></label><br/>
+    <label>* 전화번호 : <input type="text" name="phone_number" stype="width:400px"></label>
     <input type="submit" value="회원가입"/>
 </form>
 </body>

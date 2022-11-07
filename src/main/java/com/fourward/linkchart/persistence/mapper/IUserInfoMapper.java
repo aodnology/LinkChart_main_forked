@@ -14,5 +14,8 @@ public interface IUserInfoMapper {
 
     // 로그인을 위해 아이디와 비밀번호가 일치하는지 확인하기
     UserInfoDTO getUserLoginCheck(UserInfoDTO pDTO) throws Exception;
+
+   // 회원 가입시 아이디 중복체크
+   int getIdCheck(String user_id) throws Exception;
 }
 

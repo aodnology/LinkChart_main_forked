@@ -44,6 +44,10 @@
     <a href="chart/searchStockData" target="_self">종목 가져오기 페이지</a>
     <br>
     <a href="chart/viewStockChart" target="_self">차트 페이지</a>
+    <br>
+    <a href="user/loginForm" target="_self">로그인 페이지</a>
+    <br>
+    <a href="user/userRegForm" target="_self">회원가입</a>
 
     <div>
         <label for="putKeyword">뉴스 검색 키워드 : </label><input type="text" size="10" id="putKeyword">

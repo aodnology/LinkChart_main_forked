@@ -32,13 +32,18 @@
 
     <label>아이디 :
         <input type="text" name="user_id" />
-    </label><br/>
+    <span id="olmessage"></span><br/>
 
     <label>비밀번호 :
         <input type="password" name="password" />
     </label>
     <br/>
     <input type="submit" value="로그인"/>
+    <button type="submit" value="아이디찾기"><a href="findId" targer="_self"></a>아이디찾기</button>
+    <button type="submit" value="비밀번호찾기">비밀번호찾기</button>
+    <br>
+    <button type ="submit" value="회원가입"><a href="userRegForm" target="_self">회원가입</a></button>
+
 </form>
 </body>
 </html>
