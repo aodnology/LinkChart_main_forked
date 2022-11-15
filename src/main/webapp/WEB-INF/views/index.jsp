@@ -74,6 +74,12 @@
         });
     </script>
 
+    <script>
+        $("#testClick").click(function(){
+            alert("테스트 클릭 성공")
+        });
+    </script>
+
     <style>
         .newsMain_div {
             border: solid #50586c;
@@ -136,14 +142,16 @@
                     </span>
                     </a>
                 </li>
+
+            <!--Notice navigation-->
                 <li class="lcn_list" id="lcnav06">
                     <a href="#">
                     <span class="lcn_icon">
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="notice"></i>
                     </span>
                         <span class="lcn_text">
-                        NOTICE
-                    </span>
+                            <a class="tile" title="NOTICE" href="/notice/noticeInfo" target="_self">NOTICE</a>
+                        </span>
                     </a>
                 </li>
             </ul>

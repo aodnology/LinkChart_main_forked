@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
-@RequestMapping(value="/Notice")
+@RequestMapping(value="/notice")
 @Controller
 public class NoticeController {
 
-    @GetMapping(value = "noticeInfo")
+    @GetMapping(value = "/noticeInfo")
     public String NoticePage() throws Exception {
         log.info(this.getClass().getName() + "Notice start");
         log.info(this.getClass().getName() + "Notice End");
 
         //views noticeInfo.jsp 호출
-        return "/Notice/noticeInfo";
+        return "/notice/noticeInfo";
     }
 }
