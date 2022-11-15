@@ -1,2 +1,8 @@
-package com.fourward.linkchart.service;public interface INoticeService {
+package com.fourward.linkchart.service;
+
+import java.util.Map;
+import java.util.List;
+
+public interface INoticeService {
+
 }

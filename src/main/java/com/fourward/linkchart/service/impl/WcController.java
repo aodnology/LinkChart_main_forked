@@ -1,2 +1,11 @@
-package com.fourward.linkchart.service.impl;public class WcController {
+package com.fourward.linkchart.service.impl;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+@Slf4j
+@Service
+public class WcController {
+
+
 }

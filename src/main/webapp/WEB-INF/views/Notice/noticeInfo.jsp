@@ -7,12 +7,15 @@
 </head>
 <body>
     <form action="getNoticeData" method="get"></form>
+    <div>
         <div class="form-group">
-            <label>게시판 제목</label>
+            <label>제목:</label>
             <input name = title type="text" class="form-control">
         </div>
         <div class="form-group">
             <label>게시판 내용</label>
+            <input name = title type="text" class="form-control">
         </div>
+    </div>
 </body>
 </html>

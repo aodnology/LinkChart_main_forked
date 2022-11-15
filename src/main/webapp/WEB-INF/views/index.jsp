@@ -127,6 +127,16 @@
                     </span>
                     </a>
                 </li>
+                <li class="lcn_list" id="lcnav06">
+                    <a href="#">
+                    <span class="lcn_icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                        <span class="lcn_text">
+                        NOTICE
+                    </span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

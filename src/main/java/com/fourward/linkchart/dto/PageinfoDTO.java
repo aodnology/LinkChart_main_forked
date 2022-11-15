@@ -1,11 +1,11 @@
-package com.fourward.linkchart.vo;
+package com.fourward.linkchart.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class PageinfoVO {
+public class PageinfoDTO {
     private int page;
     private int maxPage;
     private int startPage;

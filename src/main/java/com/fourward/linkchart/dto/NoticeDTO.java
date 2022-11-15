@@ -1,4 +1,4 @@
-package com.fourward.linkchart.vo;
+package com.fourward.linkchart.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,22 +7,16 @@ import java.util.Date;
 
 @Getter
 @Setter
-// 공지사항 글 하나의 정보
-/*
-VO (Value Object)
-: read-only , 사용하는 도중에 변경 불가능하며 오직 읽기만 가능
-공지사항의 특성상 vo를 사용
-* */
-public class NoticeVO {
-    private int NOTICE_NUM;
-    private String NOTICE_NAME;
-    private String NOTICE_PASS;
-    private String NOTICE_SUBJECT;
-    private String NOTICE_CONTENT;
-    private String NOTICE_FILE;
-    private int NOTICE_RE_REF;
-    private int NOTICE_RE_LEV;
-    private int NOTICE_RE_SEQ;
-    private int NOTICE_READCOUNT;
-    private Date NOTICE_DATE;
+public class NoticeDTO {
+    private String notice_seq; // 기본키, 순번
+    private String title;      // 제목
+    private String notice_yn;  // 공지글 여부
+    private String contents;   // 글 내용
+    private String user_id;    // 작성자
+    private String read_cnt;   // 조회수
+    private String reg_id;     // 등록자 아이디
+    private String reg_dt;     // 등록일
+    private String chg_id;     // 수정자 아이디
+    private String chg_dt;     // 수정일
+    private String user_name;  // 등록자명
 }

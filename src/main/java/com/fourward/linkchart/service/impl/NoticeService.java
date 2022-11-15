@@ -1,2 +1,4 @@
-package com.fourward.linkchart.service.impl;public class NoticeService {
+package com.fourward.linkchart.service.impl;
+
+public class NoticeService {
 }
