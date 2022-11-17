@@ -98,10 +98,12 @@ public class DateUtil {
      * @param time 시간
      * @param fm   날짜 출력 형식
      * @return date
+     * 이 부분 중요
      */
     public static String getLongDateTime(Integer time, String fm) {
         Instant instant = Instant.ofEpochSecond(time);
-
-        return DateTimeFormatter.ofPattern(fm).withZone(ZoneId.systemDefault()).format(instant);
+        return DateTimeFormatter.ofPattern(fm)
+                .withZone(ZoneId.systemDefault()) // 가장 중요함 현재 서버가 실행하고 있는 컴퓨터 시간대로 변경
+                .format(instant);
     }
 }

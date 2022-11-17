@@ -150,7 +150,7 @@
                         <i class="notice"></i>
                     </span>
                         <span class="lcn_text">
-                            <a class="tile" title="NOTICE" href="/notice/noticeInfo" target="_self">NOTICE</a>
+                            <a class="tile" title="NOTICE" href="/notice/NoticeList" target="_self">NOTICE</a>
                         </span>
                     </a>
                 </li>
@@ -158,6 +158,9 @@
         </div>
     </div>
 </div>
+
+<!--리뷰 이벤트-->
+<div><a href="http://127.0.0.1:5000/" targer="_blank">리뷰를 남겨주세요</a></div>
 
 <div class="section_01_wrap">
 
@@ -206,7 +209,7 @@
         <span style="--i:12"></span>
         <span style="--i:24"></span>
         <span style="--i:10"></span>
-        <span style="--i:14"></span>
+        <span style="=--i:14"></span>
         <span style="--i:23"></span>
         <span style="--i:18"></span>
         <span style="--i:16"></span>
