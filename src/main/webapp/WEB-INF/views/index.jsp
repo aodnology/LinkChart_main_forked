@@ -20,6 +20,7 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript" src="js/doimg.js"></script>
     <link rel="stylesheet" href="/css/intro.css"/>
     <link rel="stylesheet" href="/css/popup1.css"/>
     <link rel="stylesheet" href="/css/login.css"/>
@@ -126,8 +127,6 @@
             </ul>
         </div>
     </div>
-    <!--리뷰 이벤트-->
-<div><a href="http://127.0.0.1:5000/" targer="_blank">리뷰를 남겨주세요</a></div>
 
     <div class="section_01_wrap">
     
@@ -325,6 +324,10 @@
                                 <label for="stockName"
                                 >종목명 :
                                     <input type="text" id="stockName"/>
+                                </label>
+                                <label>
+                                    토픽모델링 :
+                                    <input type="text" id="topic">
                                 </label>
                                 <button onclick="getStockData();">전송</button>
                             </div>
