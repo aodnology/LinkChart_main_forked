@@ -1,24 +1,29 @@
-//package com.fourward.linkchart.controller;
-//import com.amazonaws.util.IOUtils;
-//import lombok.extern.slf4j.Slf4j;
-//import org.springframework.http.MediaType;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.ResponseBody;
-//
-//import java.io.IOException;
-//import java.io.InputStream;
-//
-//@Slf4j
-//@Controller
-//public class AwsController {
-//    @GetMapping(
-//            value = "/get-image-with-media-type",
-//            produces = MediaType.IMAGE_JPEG_VALUE
-//    )
-//    public @ResponseBody
-//    byte[] getImageWithMediaType() throws IOException {
-//        InputStream in = getClass().getResourceAsStream("/com/baeldung/produceimage/image.jpg");
-//        return IOUtils.toByteArray(in);
-//    }
-//}
+package com.fourward.linkchart.controller;
+import com.amazonaws.util.IOUtils;
+import com.fourward.linkchart.service.impl.AwsService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+@Slf4j
+@Controller
+@RequiredArgsConstructor
+public class AwsController {
+    private final AwsService awsService;
+
+    @GetMapping(
+            value = "/get-image-with-media-type",
+            produces = MediaType.IMAGE_JPEG_VALUE
+    )
+    public @ResponseBody
+    byte[] getImageWithMediaType() throws IOException {
+        InputStream in = getClass().getResourceAsStream("/com/baeldung/produceimage/image.jpg");
+        return IOUtils.toByteArray(in);
+    }
+}
