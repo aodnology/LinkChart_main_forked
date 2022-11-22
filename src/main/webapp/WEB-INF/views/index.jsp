@@ -20,6 +20,7 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript" src="js/doimg.js"></script>
     <link rel="stylesheet" href="/css/intro.css"/>
     <link rel="stylesheet" href="/css/popup1.css"/>
     <link rel="stylesheet" href="/css/login.css"/>
@@ -53,6 +54,18 @@
             getNewsData("증시", dateToString(new Date()), false);
         });
     </script>
+
+    <script>
+        $("#testClick").click(function(){
+            alert("테스트 클릭 성공")
+        });
+    </script>
+
+    <style>
+        .newsMain_div {
+            border: solid #50586c;
+        }
+    </style>
 </head>
 
 <body>
@@ -100,10 +113,21 @@
                         </span>
                     </a>
                 </li>
+                <!--Notice navigation-->
+                <li class="lcn_list" id="lcnav06">
+                    <a href="#">
+                    <span class="lcn_icon">
+                        <i class="notice"></i>
+                    </span>
+                        <span class="lcn_text">
+                            <a class="tile" title="NOTICE" href="/notice/NoticeList" target="_self">NOTICE</a>
+                        </span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
-    
+
     <div class="section_01_wrap">
     
         <div class="bubbles">
@@ -302,7 +326,11 @@
                                 >종목명 :
                                     <input type="text" id="stockName"/>
                                 </label>
-                                <button onclick="getStockData(null, true);">전송</button>
+                                <label>
+                                    토픽모델링 :
+                                    <input type="text" id="topic">
+                                </label>
+                                <button onclick="getStockData();">전송</button>
                             </div>
                         </div>
                         <div class="chart_news_np">
