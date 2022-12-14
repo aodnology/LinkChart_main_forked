@@ -326,18 +326,17 @@
                             </div>
                         </div>
                         <div class="chart_news_np">
-                            <div id="newsMain"><%-- ajax 적용 뉴스--%></div>
+                            <div id="newsMain" style="max-height: 16vh;"><%-- ajax 적용 뉴스--%></div>
                         </div>
                     </div>
 
                     <div class="topic_cover_wrap">
                         <div class="topic_cover">
                             <div id="imageArea" class="topic_wrap">
-                                <%--<img id="imgTest" class="topic_img">--%>
-                                <div class="topic_img" id="wordcloud_container" align="center"></div>
+                                <img id="imgTest" class="topic_img">
+<%--                                <div class="topic_img" id="wordcloud_container" align="center"></div>--%>
                             </div>
                         </div>
-
                     </div>
                     </div>
 

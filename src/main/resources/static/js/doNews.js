@@ -28,8 +28,8 @@ function getNewsData(keyword, date, condition) {
         },
         success: function (data) {
             if (data.length !== 0) {
-                if (data.image) {
-                    // document.getElementById('imgTest').src = data.image.img_save_path + data.image.img_save_name;
+                if (data.image !== 0) {
+                    document.getElementById('imgTest').src = data.image.img_save_path + data.image.img_save_name;
                 }
                 wordcloud(data.wordcloud)
                 return loadNews(data.newsList);
@@ -171,12 +171,12 @@ function loadNews(data) {
     document.getElementById('newsMain').appendChild(table);
 }
 
-function wordcloud(data){
+function wordcloud(data) {
     /*console.log(data)
     const obj = JSON.parse(JSON.stringify(data)); // JSON 문자열 javascript 객체로 변환
     console.log(obj);*/
     var a = []
-    data.forEach(b=>{
+    data.forEach(b => {
         const c = []
         c.push(String(b[0]))
         c.push(parseInt(b[1]))
@@ -184,7 +184,7 @@ function wordcloud(data){
     })
     $("#wordcloud_container").empty();
     var chart = anychart.tagCloud(a);
-    chart.title("기사 한눈에 보기");
+    chart.title("기사 주요 키워드");
     chart.container("wordcloud_container");
 
     chart.hovered().fill("#8711c3");
